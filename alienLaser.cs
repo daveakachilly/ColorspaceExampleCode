@@ -19,8 +19,8 @@ public class alienlaser : MonoBehaviour {
 			Transform char1 = GameObject.FindGameObjectWithTag ("char").transform;
 			if ((transform.position.x - char1.position.x) > 0) {
 				transform.Translate (new Vector3 (-0.01f, 0, 0));
-			} else if (Mathf.Abs (transform.position.x - char1.position.x) <= 0.05f) {
-			} else {
+			} 
+			else if (Mathf.Abs (transform.position.x - char1.position.x) > 0.05f)
 				transform.Translate (new Vector3 (0.01f, 0, 0));
 			}
 			timer+=1;
